@@ -10,7 +10,7 @@ import UIKit
 
 
 /// View that shows the character list, loader etc
-final class CharacterListView: UIView {
+final class RMCharacterListView: UIView {
     
     private let viewModel = CharacterListViewViewModel()
     
@@ -29,7 +29,8 @@ final class CharacterListView: UIView {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isHidden = true
         collectionView.alpha = 0
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(RMCharacterCollectionViewCell.self,
+                                forCellWithReuseIdentifier: RMCharacterCollectionViewCell.cellIdentifier)
         return collectionView
     }()
 
