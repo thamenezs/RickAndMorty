@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class CharacterListViewViewModel: NSObject {
-    func fetchCharacters() {
+    public func fetchCharacters() {
         RMService.shared.execute(.listCharactersRequest, expecting: RMGetAllCharactersResponse.self) { result in
             switch result {
             case .success(let model):
